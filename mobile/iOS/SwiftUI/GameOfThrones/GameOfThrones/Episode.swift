@@ -11,6 +11,25 @@ struct Episode {
     let mediumImageID: String
     let originalImageID: String
     
+    static func groupBy(array:[Episode]) -> [Int: [Episode]]{
+      let dict = Dictionary(grouping: array, by: {$0.season})
+      return dict
+    }
+     static func getEpisodes(array:[Episode]) -> [[Episode]]{
+      var resultArray = [[Episode]]()
+      let dictOfGOT = groupBy(array: Episode.allEpisodes)
+      for key in dictOfGOT.keys.sorted() {
+        var innerArray = [Episode]()
+        if let array = dictOfGOT[key] {
+          for element in array {
+            innerArray.append(element)
+          }
+          resultArray.append(innerArray)
+        }
+      }
+      return resultArray
+    }
+    
     static let allEpisodes = [
         Episode(airdate: "2011-04-17", id: 4952, name: "Winter is Coming", number: 1, season: 1, runtime: 60, summary: "Lord Eddard Stark, ruler of the North, is summoned to court by his old friend, King Robert Baratheon, to serve as the King's Hand. Eddard reluctantly agrees after learning of a possible threat to the King's life. Eddard's bastard son Jon Snow must make a painful decision about his own future, while in the distant east Viserys Targaryen plots to reclaim his father's throne, usurped by Robert, by selling his sister in marriage.", mediumImageID: "2668", originalImageID: "2668"),
         Episode(airdate: "2011-04-24", id: 4953, name: "The Kingsroad", number: 2, season: 1, runtime: 60, summary: "An incident on the Kingsroad threatens Eddard and Robert's friendship. Jon and Tyrion travel to the Wall, where they discover that the reality of the Night's Watch may not match the heroic image of it.", mediumImageID: "2669", originalImageID: "2669"),
