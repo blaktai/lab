@@ -15,6 +15,13 @@ struct Cell: View {
       .scaledToFit()
   }
   
+  private var EpisodeMetaDataView: some View {
+    VStack {
+      Text(episode.name)
+      Text(episode.airdate)
+    }
+  }
+  
   var body: some View {
     HStack {
       Image(episode.originalImageID)
