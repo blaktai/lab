@@ -11,23 +11,12 @@ struct Episode {
     let mediumImageID: String
     let originalImageID: String
     
-    static func groupBy(array:[Episode]) -> [Int: [Episode]]{
-      let dict = Dictionary(grouping: array, by: {$0.season})
-      return dict
+    static func groupBy<Key:Hashable>(closure:(Episode) -> Key) -> [Key: [Episode]]{
+      return Dictionary(grouping: allEpisodes, by: closure)
     }
-     static func getEpisodes(array:[Episode]) -> [[Episode]]{
-      var resultArray = [[Episode]]()
-      let dictOfGOT = groupBy(array: Episode.allEpisodes)
-      for key in dictOfGOT.keys.sorted() {
-        var innerArray = [Episode]()
-        if let array = dictOfGOT[key] {
-          for element in array {
-            innerArray.append(element)
-          }
-          resultArray.append(innerArray)
-        }
-      }
-      return resultArray
+     static func getEpisodesBySeason() -> [[Episode]]{
+        let dictOfGOT = groupBy { $0.season }
+        return dictOfGOT.keys.sorted().map { dictOfGOT[$0] ?? [] }
     }
     
     static let allEpisodes = [
