@@ -24,12 +24,12 @@ struct Cell: View {
   
   var body: some View {
     HStack {
-      Image(episode.originalImageID)
-        .resizable()
-        .scaledToFit()
-      VStack {
-        Text(episode.name)
-        Text(episode.airdate)
+      if align == .left {
+        ImageView
+        EpisodeMetaDataView
+      } else {
+        EpisodeMetaDataView
+        ImageView
       }
     }
   }
