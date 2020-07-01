@@ -14,7 +14,7 @@ struct Episode {
     static func groupBy<Key:Hashable>(closure:(Episode) -> Key) -> [Key: [Episode]]{
       return Dictionary(grouping: allEpisodes, by: closure)
     }
-     static func getEpisodesBySeason() -> [[Episode]]{
+    static var episodesBySeason: [[Episode]] {
         let dictOfGOT = groupBy { $0.season }
         return dictOfGOT.keys.sorted().map { dictOfGOT[$0] ?? [] }
     }
