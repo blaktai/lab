@@ -9,7 +9,15 @@ struct Cell: View {
   }
   
   var body: some View {
-    Text(episode.name)
+    HStack {
+      Image(episode.originalImageID)
+        .resizable()
+        .scaledToFit()
+      VStack {
+        Text(episode.name)
+        Text(episode.airdate)
+      }
+    }
   }
 }
 
