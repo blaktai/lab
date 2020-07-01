@@ -9,6 +9,12 @@ struct Cell: View {
     self.align = align
   }
   
+  private var ImageView: some View {
+    Image(episode.originalImageID)
+      .resizable()
+      .scaledToFit()
+  }
+  
   var body: some View {
     HStack {
       Image(episode.originalImageID)
