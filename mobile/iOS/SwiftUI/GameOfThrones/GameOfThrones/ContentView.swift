@@ -1,9 +1,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
+  
+  private let episodesBySeason = Episode.episodesBySeason
+  
+  var body: some View {
+    List(0..<episodesBySeason.count, id: \.self) { index in
+      Section(header: Text("Season \(index + 1)")) {
+        ForEach(0..<self.episodesBySeason[index].count, id: \.self) { episodeIndex in
+          Cell(episode: self.episodesBySeason[index][episodeIndex],
+               align: index % 2 == 0 ? .left : .right )
+        }
+      }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
