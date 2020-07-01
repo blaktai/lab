@@ -3,9 +3,10 @@ import SwiftUI
 struct Cell: View {
   
   private let episode: Episode
-  
-  init(episode:Episode){
+  private let align: Alignment
+  init(episode:Episode, align:Alignment = .left){
     self.episode = episode
+    self.align = align
   }
   
   var body: some View {
@@ -21,6 +22,12 @@ struct Cell: View {
   }
 }
 
+extension Cell {
+  enum Alignment {
+    case left
+    case right
+  }
+}
 struct Cell_Previews: PreviewProvider {
   static var previews: some View {
     Cell(episode: Episode.allEpisodes.first!)
