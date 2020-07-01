@@ -14,6 +14,7 @@
 		56E20E7C24AAC2C4002B3D58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E20E7B24AAC2C4002B3D58 /* Preview Assets.xcassets */; };
 		56E20E7F24AAC2C4002B3D58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E20E7D24AAC2C4002B3D58 /* LaunchScreen.storyboard */; };
 		56E20E8724AAC473002B3D58 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E20E8624AAC473002B3D58 /* Episode.swift */; };
+		56E20E8C24AC3E2D002B3D58 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E20E8B24AC3E2D002B3D58 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		56E20E7E24AAC2C4002B3D58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56E20E8024AAC2C4002B3D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E20E8624AAC473002B3D58 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		56E20E8B24AC3E2D002B3D58 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				56E20E8624AAC473002B3D58 /* Episode.swift */,
 				56E20E8824AAC4D5002B3D58 /* Supporting Files */,
 				56E20E7A24AAC2C4002B3D58 /* Preview Content */,
+				56E20E8B24AC3E2D002B3D58 /* DetailView.swift */,
 			);
 			path = GameOfThrones;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				56E20E7324AAC2C4002B3D58 /* AppDelegate.swift in Sources */,
 				56E20E8724AAC473002B3D58 /* Episode.swift in Sources */,
 				56E20E7524AAC2C4002B3D58 /* SceneDelegate.swift in Sources */,
+				56E20E8C24AC3E2D002B3D58 /* DetailView.swift in Sources */,
 				56E20E7724AAC2C4002B3D58 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
