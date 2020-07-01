@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Cell {
+struct Cell: View {
   
   private let episode: Episode
   
@@ -15,6 +15,6 @@ struct Cell {
 
 struct Cell_Previews: PreviewProvider {
   static var previews: some View {
-    /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    Cell(episode: Episode.allEpisodes.first!)
   }
 }
