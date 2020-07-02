@@ -62,12 +62,10 @@
 		56E20E7124AAC2C4002B3D58 /* GameOfThrones */ = {
 			isa = PBXGroup;
 			children = (
-				56E20E7624AAC2C4002B3D58 /* ContentView.swift */,
-				56E20E8B24AC3E2D002B3D58 /* DetailView.swift */,
-				56E20E8D24AC420A002B3D58 /* Cell.swift */,
-				56E20E8624AAC473002B3D58 /* Episode.swift */,
+				56E20E8F24AD7E13002B3D58 /* Views */,
 				56E20E8824AAC4D5002B3D58 /* Supporting Files */,
 				56E20E7A24AAC2C4002B3D58 /* Preview Content */,
+				56E20E8624AAC473002B3D58 /* Episode.swift */,
 				56E20E8024AAC2C4002B3D58 /* Info.plist */,
 			);
 			path = GameOfThrones;
@@ -90,6 +88,16 @@
 				56E20E7824AAC2C4002B3D58 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56E20E8F24AD7E13002B3D58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				56E20E7624AAC2C4002B3D58 /* ContentView.swift */,
+				56E20E8B24AC3E2D002B3D58 /* DetailView.swift */,
+				56E20E8D24AC420A002B3D58 /* Cell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

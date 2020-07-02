@@ -17,8 +17,7 @@ struct ContentView: View {
           }
         }
       }.navigationBarTitle("Game of Thrones")
-    }
-    .navigationBarBackButtonHidden(false)
+    }.navigationBarBackButtonHidden(false)
   }
 }
 
