@@ -4,16 +4,18 @@ struct DetailView: View {
   
   private let episode: Episode
   
-  init(episode:Episode){
+  init(_ episode:Episode){
     self.episode = episode
   }
   
   var body: some View {
     VStack(alignment: .center, spacing: 7.0){
-      Image(episode.originalImageID)
-        .resizable(capInsets: .init(top: 0, leading: 0, bottom: 0, trailing: 0), resizingMode: .stretch)
-      HStack {
+      Image(episode.mediumImageID)
+        .resizable()
+        .frame(minHeight: 400)
+      VStack {
         Text(episode.airdate)
+        Spacer(minLength: 25)
         Text(episode.name)
       }.aspectRatio(contentMode: .fit)
     }
@@ -23,6 +25,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
   static var previews: some View {
-    DetailView(episode: Episode.allEpisodes.first!)
+    DetailView(Episode.allEpisodes.first!)
   }
 }
