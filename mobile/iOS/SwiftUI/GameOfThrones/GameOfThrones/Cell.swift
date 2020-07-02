@@ -4,7 +4,7 @@ struct Cell: View {
   
   private let episode: Episode
   private let align: Alignment
-  init(episode:Episode, align:Alignment = .left){
+  init(_ episode:Episode, align:Alignment = .left){
     self.episode = episode
     self.align = align
   }
@@ -12,14 +12,14 @@ struct Cell: View {
   private var ImageView: some View {
     Image(episode.originalImageID)
       .resizable()
-      .scaledToFit()
+      .aspectRatio(contentMode: .fit)
   }
   
   private var EpisodeMetaDataView: some View {
     VStack {
       Text(episode.name)
       Text(episode.airdate)
-    }
+    }.frame(maxWidth: 100)
   }
   
   var body: some View {
@@ -43,6 +43,6 @@ extension Cell {
 }
 struct Cell_Previews: PreviewProvider {
   static var previews: some View {
-    Cell(episode: Episode.allEpisodes.first!)
+    Cell(Episode.allEpisodes.first!)
   }
 }
