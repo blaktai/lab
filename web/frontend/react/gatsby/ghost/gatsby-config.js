@@ -3,8 +3,16 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-
+const path = require('path');
+let ghostConfig;
+try {
+  ghostConfig = require('./ghost.env');
+} catch (e) {
+  throw new Error("Couldn't find the ghost config file")
+}
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  plugins: [{
+    resolve: 'gatsby-source-ghost',
+    options: ghostConfig.dev
+  }],
 }
