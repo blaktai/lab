@@ -22,7 +22,7 @@ struct EpisodeListView: View {
 
 struct EpisodeSeasonView: View {
   
-  init(season: Season, withNavigation: Bool = true){
+  init(season: Season, withNavigation: Bool = false){
     self.season = season
     self.withNavigation = withNavigation
   }
