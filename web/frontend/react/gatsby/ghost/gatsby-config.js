@@ -6,17 +6,12 @@
 const path = require("path")
 let ghostConfig
 try {
-  ghostConfig = require("./ghost.env")
+  ghostConfig = require("./.ghost.env")
 } catch (e) {
   throw new Error("Couldn't find the ghost config file")
 }
 module.exports = {
   plugins: [
-    {
-      resolve: "gatsby-source-filesystem",
-      path: path.resolve(__dirname, "src", "images"),
-      name: "images",
-    },
     {
       resolve: "gatsby-source-ghost",
       options: ghostConfig.dev,
