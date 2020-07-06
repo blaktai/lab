@@ -11,12 +11,33 @@ struct EpisodeListView: View {
     List {
       ForEach(0..<episodes.count) { seasonIndex in
         Section(header: Text("Season \(seasonIndex + 1)")) {
-          ForEach(0..<self.episodes[seasonIndex].count) { episodeIndex  in
-            NavigationLink(destination: DetailView( self.episodes[seasonIndex][episodeIndex])) {
-              Cell(self.episodes[seasonIndex][episodeIndex])
-            }
+          EpisodeSeasonView(season: self.episodes[seasonIndex],
+                            withNavigation: self.withNavigation)
           }
         }
+      }
+    }
+}
+
+
+struct EpisodeSeasonView: View {
+  
+  init(season: Season, withNavigation: Bool = true){
+    self.season = season
+    self.withNavigation = withNavigation
+  }
+  
+  typealias Season = [Episode]
+  private let season: Season
+  private let withNavigation: Bool
+  var body: some View {
+    ForEach(0..<season.count) { episodeIndex  in
+      if self.withNavigation {
+        NavigationLink(destination: DetailView(self.season[episodeIndex])) {
+          Cell(self.season[episodeIndex])
+        }
+      } else {
+        Cell(self.season[episodeIndex])
       }
     }
   }
