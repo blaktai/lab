@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		569128D124B3CFBD001F5D66 /* EpisodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569128D024B3CFBD001F5D66 /* EpisodeListView.swift */; };
 		56E20E7324AAC2C4002B3D58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E20E7224AAC2C4002B3D58 /* AppDelegate.swift */; };
 		56E20E7524AAC2C4002B3D58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E20E7424AAC2C4002B3D58 /* SceneDelegate.swift */; };
 		56E20E7724AAC2C4002B3D58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E20E7624AAC2C4002B3D58 /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		569128D024B3CFBD001F5D66 /* EpisodeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListView.swift; sourceTree = "<group>"; };
 		56E20E6F24AAC2C4002B3D58 /* GameOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E20E7224AAC2C4002B3D58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56E20E7424AAC2C4002B3D58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				56E20E7624AAC2C4002B3D58 /* ContentView.swift */,
 				56E20E8B24AC3E2D002B3D58 /* DetailView.swift */,
 				56E20E8D24AC420A002B3D58 /* Cell.swift */,
+				569128D024B3CFBD001F5D66 /* EpisodeListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				56E20E7324AAC2C4002B3D58 /* AppDelegate.swift in Sources */,
 				56E20E8724AAC473002B3D58 /* Episode.swift in Sources */,
 				56E20E7524AAC2C4002B3D58 /* SceneDelegate.swift in Sources */,
+				569128D124B3CFBD001F5D66 /* EpisodeListView.swift in Sources */,
 				56E20E8C24AC3E2D002B3D58 /* DetailView.swift in Sources */,
 				56E20E7724AAC2C4002B3D58 /* ContentView.swift in Sources */,
 				56E20E8E24AC420A002B3D58 /* Cell.swift in Sources */,
